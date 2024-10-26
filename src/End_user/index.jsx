@@ -9,19 +9,25 @@ const Enduser = () => {
 
   // List of main options
   const mainOptions = [
-    { label: "Select a Railway Station", value: "" },
-    { label: "North India", value: "north" },
-    { label: "South India", value: "south" },
-    { label: "East India", value: "east" },
-    { label: "West India", value: "west" },
+    { label: "Complaint", value: "complaint" },
+    { label: "Catering", value: "Catering" },
+    { label: "Security", value: "security" },
+    { label: "EnquiryCounter", value: "EnquiryCounter" },
+    { label: "DirtyLinen", value: "DirtyLinen" },
+    { label: "SeatingAssignment", value: "seatingAssignment" },
+    { label: "Powersupply", value: "Powersupply" },
+  
   ];
 
   // Sub-options based on main selection
   const subOptions = {
-    north: ["New Delhi", "Amritsar", "Lucknow"],
-    south: ["Chennai", "Bengaluru", "Hyderabad"],
-    east: ["Kolkata", "Bhubaneswar", "Guwahati"],
-    west: ["Mumbai", "Ahmedabad", "Pune"],
+    Catering: ["hygiene", "quality or taste", "Delay"],
+    Hygiene: ["washroom", "compartment"],
+    security: ["misbehaviour", "missing of things",],
+    EnquiryCounter: ["harsh behaviour"],
+    DirtyLinen:["no pillow,bedsheet provided","replace/not clean"],
+    SecurityAssignment:["Problem with co-passengers","seat occupied by unknown"],
+    Powersupply:["plug point","ac/fan not working","short circuit"]
   };
 
   const handleSubmit = (e) => {
