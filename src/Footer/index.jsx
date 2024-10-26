@@ -4,7 +4,7 @@ import './index.scss';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container1">
         <div className="section">
           <h3>About Us</h3>
           <p>We are committed to providing the best services for our customers with quality and dedication.</p>
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       
       <div className="bottom">
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+        <p>&copy; 2024 Nexus. All rights reserved.</p>
       </div>
     </footer>
   );
