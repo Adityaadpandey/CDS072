@@ -1,66 +1,66 @@
-
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #3a86ff, #8338ec);
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+  .heading {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .options {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #3a86ff, #8338ec);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    
-    .heading {
-      font-size: 2.5em;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    a{
-      text-decoration: none;
-    }
-  
-    .options {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .option-card {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
+      min-height: 170px;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-  
-      .option-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        padding: 20px;
-        background-color: #fff;
-        color: #333;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s;
-  
-        &:hover {
-          transform: scale(1.05);
-        }
-  
-        .option-title {
-          font-size: 1.2em;
-          margin-bottom: 0.5em;
-        }
-  
-        .option-text {
-          font-size: 0.9em;
-          text-align: center;
-        }
+      width: 200px;
+      padding: 20px;
+      background-color: #fff;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
       }
-    }
-  
-    @media (max-width: 768px) {
-      .heading {
-        font-size: 2em;
+
+      .option-title {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
       }
-      
-      .option-card {
-        width: 100%;
-        max-width: 300px;
+
+      .option-text {
+        font-size: 0.9em;
+        text-align: center;
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2em;
+    }
+
+    .option-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
