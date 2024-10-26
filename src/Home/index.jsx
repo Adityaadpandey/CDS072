@@ -13,7 +13,7 @@ const Home = () => {
           </p>
           </div>
         </a>
-        <a href="/">
+        <a href="/endsolver">
         <div className="option-card">
           <h2 className="option-title">Track Complaint Status</h2>
           <p className="option-text">
