@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       
       <div className="bottom">
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+        <p>&copy; 2024 Nexus. All rights reserved.</p>
       </div>
     </footer>
   );

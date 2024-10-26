@@ -7,7 +7,7 @@ const Home = () => {
     <div className="container">
       <h1 className="heading">Complaint Management System</h1>
       <div className="options">
-        <a href="/">
+        <a href="/enduser">
         <div className="option-card">
           <h2 className="option-title">File a Complaint</h2>
           <p className="option-text">
