@@ -21,7 +21,10 @@ const Endsolver = () => {
 
             <div className="thought-content">
               <h2>{thought.content}</h2>
+              <h3>{thought.pnr}</h3>
               <h3>{thought.title}</h3>
+              <h3>{thought.contact}</h3>
+              {thought.resolution === null && <h3>Resolution Pending <span className="crs">❌</span></h3>}
               <p>{thought.solutionbyai}</p>
               {/* <p>{thought.solutionbyai.solution}</p> */}
               <span>{formatDate(thought.date)}</span>

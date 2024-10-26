@@ -2,46 +2,63 @@
   margin-left: 30px;
   display: grid;
   grid-row: auto;
-
-  // flex-wrap: wrap; // Allow wrapping of cards
-  // justify-content: space-between; // Space between cards
-  // margin-bottom: 100px;
   margin-top: 20px;
 }
 
 .thought-card {
-  background: rgba(255, 255, 255, 0.1); // Background for the card
-  border: 1px solid #ccc; // Border style
-  padding: 20px; // Inner padding for the card
-  margin-bottom: 20px; // Margin below each card
-  width: calc(100%); // Full width with margins considered
-  max-width: 600px; // Maximum width for larger screens
-  display: flex; // Flexbox for inner content alignment
-  align-items: center; // Center items vertically
-  border-radius: 8px; // Rounded corners
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid #ccc; 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  width: calc(100%);
+  max-width: 600px; 
+  display: flex; 
+  align-items: center;
+  border-radius: 8px; 
 
   img {
-    width: 50px; // Image size
-    height: 50px; // Image height
-    border-radius: 50%; // Circular image
-    margin-right: 20px; // Space between image and text
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 20px;
   }
 
   .thought-content {
     h3 {
-      font-size: 1.2rem; // Font size for title
-      margin: 0; // Remove margin
-      color: rgb(166, 0, 255); // Title color
+      font-size: 1.2rem; 
+      margin: 0; 
+    }
+    .crs{
+        color: rgb(255, 0, 0); 
+       font-size: larger;
     }
 
     p {
-      margin: 0.5rem 0; // Margin for paragraph
-      color: #000000; // Text color
+      margin: 0.5rem 0; 
+      color: #000000; 
     }
 
     span {
-      font-size: 0.9rem; // Font size for the span
-      color: #888; // Color for the span
+      font-size: 0.9rem;
+      color: #888; 
     }
   }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .thought-card {
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 10px; 
+    width: 90%;
+  }
+  .thought-card img {
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
+  .thought-content h3 {
+    margin-bottom: 0.5rem; 
+  }
+    
 }
