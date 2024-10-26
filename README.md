@@ -16,8 +16,8 @@ MongoDB
 ExpressJS
 
 ## for local Setup
-`git clone https://github.com/Adityaadpandey/CDS072.git`
-`cd CDS072`
-`npm install`
+`git clone https://github.com/Adityaadpandey/CDS072.git`\n
+`cd CDS072`\n
+`npm install`\n
 `npm start`
 
