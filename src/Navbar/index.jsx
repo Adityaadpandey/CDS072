@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo">
           <Link to="/" className="logo-link">
-            Nexus
+            Neuxus
           </Link>
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          
+        
         </div>
       </div>
     </nav>

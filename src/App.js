@@ -5,6 +5,7 @@ import Endsolver from './End_solver';
 import Enduser from './End_user';
 import Manageuser from './Manage_user';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/enduser' element={<Enduser/>} />
         <Route path='/manager' element={<Manageuser/>} />
     </Routes>
+    <Footer/>
     </>
   )
 }
