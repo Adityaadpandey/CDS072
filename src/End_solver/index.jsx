@@ -10,7 +10,7 @@ const Endsolver = () => {
   useEffect(() => {
     fetch("https://backend-rail-cms-production.up.railway.app/api")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setData(data.reverse()));
   }, []);
   return (
     <>
