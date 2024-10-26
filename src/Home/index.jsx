@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-// impoty
-=======
-import React from "react";
-import "./index.scss";
->>>>>>> c5f0dfb (okk for now)
+import './index.scss'
 
 const Home = () => {
   return (
