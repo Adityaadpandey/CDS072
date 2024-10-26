@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+// impoty
 
 const index = () => {
   return (
