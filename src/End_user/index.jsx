@@ -7,10 +7,9 @@ const Enduser = () => {
   const [complaint, setComplaint] = useState("");
   const [station, setStation] = useState("");
   const [subStation, setSubStation] = useState("");
-  const [formData, setFormData] = useState(null); // Store form data for API call
-  const [response, setResponse] = useState(null); // Store API response
+  const [formData, setFormData] = useState(null); 
+  const [response, setResponse] = useState(null); 
 
-  // List of main options
   const mainOptions = [
     { label: "Complaint", value: "complaint" },
     { label: "Catering", value: "catering" },
@@ -24,7 +23,6 @@ const Enduser = () => {
 const subOptions = {
   complaint: ["general issue", "specific problem"],
   catering: ["hygiene", "quality or taste", "Delay"],
-  // Hygiene: ["washroom", "compartment"],
   security: ["misbehaviour", "missing of things"],
   EnquiryCounter: ["harsh behaviour"],
   DirtyLinen: ["no pillow, bedsheet provided", "replace/not clean"],
@@ -36,21 +34,21 @@ const subOptions = {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Create form data according to API requirements
+    
     const formattedData = {
         pnr: pnr,
-        title: station, // Using station as the title
-        content: complaint, // Just the complaint text as required
+        title: station, 
+        content: complaint, 
         contact: contact,
     };
 
-    // Store the formatted data to trigger the API call in useEffect
+    
     setFormData(formattedData);
   };
 
   useEffect(() => {
     if (formData) {
-      // Perform API call with form data
+  
       const submitComplaint = async () => {
         try {
           const res = await fetch(
@@ -118,7 +116,7 @@ const subOptions = {
             value={station}
             onChange={(e) => {
               setStation(e.target.value);
-              setSubStation(""); // Reset sub-station when main option changes
+              setSubStation(""); 
             }}
           >
             {mainOptions.map((option, index) => (

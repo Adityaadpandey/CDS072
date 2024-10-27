@@ -74,6 +74,8 @@ const Faque = () => {
     ];
 
     return (
+        <div  className="container">
+
         <div className="faq-container">
             <h1>Railway Complaint Management FAQs</h1>
             <div className="faq-list">
@@ -84,6 +86,7 @@ const Faque = () => {
                     </div>
                 ))}
             </div>
+        </div>
         </div>
 
     );

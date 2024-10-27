@@ -1,14 +1,14 @@
 .sorting-buttons {
   display: flex;
   justify-content: center;
-  margin: 20px 0; // Spacing around buttons
+  margin: 20px 0; 
 }
 
 .thoughts-list {
-  padding: 20px; // Ensure consistent padding
+  padding: 20px; 
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px; // Space between cards
+  gap: 20px; 
 }
 
 .thought-card {
@@ -31,41 +31,40 @@
 
   .thought-content {
     h2 {
-      margin-bottom: 10px; // Space below content title
+      margin-bottom: 10px; 
     }
 
     h3 {
-      margin: 0; // Reset default margin
-      color: #333; // Same color as buttons
+      margin: 0;
+      color: #333;
     }
 
     p {
       margin: 0.5rem 0;
-      color: #555; // Text color
+      color: #555; 
     }
 
     span {
       font-size: 0.9rem;
-      color: #777; // Priority text color
+      color: #777; 
     }
   }
 }
 
-// Include the sort-button styles as previously defined
-.sort-button {
-  // margin: 20px auto; // Center the button
-  margin-right:10px ;
-  padding: 10px 20px; // Consistent padding
-  font-size: 1rem; // Font size matching the tasks page
-  font-weight: bold; // Bold font weight for emphasis
-  color: #fff; // White text for contrast
-  background-color: #4caf50; // Same green as the tasks page
-  border: none;
-  border-radius: 5px; // Consistent border radius
-  cursor: pointer; // Pointer cursor on hover
-  transition: background-color 0.3s ease; // Smooth transition effect
 
+.sort-button {
+  
+  margin-right:10px ;
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  color: #fff;
+  background-color: #4caf50; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
   &:hover {
-    background-color: #388e3c; // Darker shade for hover effect
+    background-color: #388e3c; 
   }
 }

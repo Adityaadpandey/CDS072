@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./index.scss";
-// eslint-disable-next-line no-unused-vars
 import { useTranslation, Trans, I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 
-// Initialize i18next
+
 i18n.init({
   resources: {
     en: {
@@ -395,7 +394,7 @@ const Home = () => {
     <div className="container">
       <h1 className="heading">{t("heading")}</h1>
 
-      {/* Language Dropdown */}
+
       <div className="language-switcher">
         <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
           {t("change_language")}: {language.toUpperCase()}
@@ -411,7 +410,7 @@ const Home = () => {
         )}
       </div>
 
-      {/* Option Cards */}
+
       <div className="options">
         <a href="/enduser">
           <div className="option-card">

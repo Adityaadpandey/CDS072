@@ -1,8 +1,14 @@
-body{
- background: linear-gradient(135deg, #3a86ff, #8338ec);}
+.container{
+    background-image: url(t3.jpg);
+    background-size: cover;
+    justify-items: end;
+
+
+
+}
 .faq-container {
     max-width: 800px;
-    margin: 40px auto;
+    // margin: 40px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -14,6 +20,7 @@ body{
     list-style: none;
     padding: 0;
     margin: 0;
+
 }
 
 .faq-item {

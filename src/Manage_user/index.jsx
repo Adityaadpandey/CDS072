@@ -11,29 +11,27 @@ const Manageuser = () => {
   const [hasNewTask, setHasNewTask] = useState(false);
 
   useEffect(() => {
-    // Function to fetch security tasks from the API
     const fetchSecurityTasks = () => {
       fetch("https://backend-rail-cms-production.up.railway.app/api")
         .then((res) => res.json())
         .then((data) => {
-          // Filter tasks based on the title "security" and reverse the order
           const filteredTasks = data
             .filter((task) => task.title && task.title.toLowerCase() === "security")
-            .reverse(); // Reverse the order here
+            .reverse(); 
 
-          // If there is a new task, update the state
+         
           if (filteredTasks.length > 0) {
             setSecurityTasks(filteredTasks);
-            setHasNewTask(true); // Indicate there's a new task
+            setHasNewTask(true); 
           }
         })
         .catch((error) => console.error("Error fetching security tasks:", error));
     };
 
-    // Set an interval to check for new tasks every 5 seconds
+    
     const intervalId = setInterval(fetchSecurityTasks, 5000);
 
-    // Cleanup the interval on component unmount
+   
     return () => clearInterval(intervalId);
   }, []);
 
