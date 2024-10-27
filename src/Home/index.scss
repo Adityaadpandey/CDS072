@@ -1,18 +1,20 @@
 // Variables for colors and fonts
-$primary-color: #3b82f6; // Tailwind blue-600
-$hover-color: #2563eb; // Tailwind blue-700
-$text-color: #4b5563; // Tailwind gray-600
-$bg-color: #f9fafb; // Tailwind gray-100
-$card-bg-color: #ffffff; // White
-$border-color: #e5e7eb; // Tailwind gray-200
+$primary-color: #3b82f6; 
+$hover-color: #2563eb;
+$text-color: #4b5563; 
+$bg-color: #f9fafb; 
+$card-bg-color: #ffffff; 
+$border-color: #e5e7eb; 
 
 .container {
   margin: 0 auto;
   padding: 2rem;
   max-width: 1200px;
+  background-image: url(path.jpg) ;
+  background-size: cover;
   text-align: center;
-  background:url(t2.jpg) no-repeat;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  
 }
 
 .heading {
@@ -65,7 +67,7 @@ $border-color: #e5e7eb; // Tailwind gray-200
       cursor: pointer;
 
       &:hover {
-        background-color: #f1f5f9; // Tailwind gray-200
+        background-color: #f1f5f9; 
         color: $primary-color;
       }
     }
