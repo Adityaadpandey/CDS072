@@ -67,6 +67,7 @@ const Enduser = () => {
             alert("Complaint submitted successfully!");
             setFormData(null);
             setResponse(null);
+            window.location.reload();
           }
         } catch (error) {
           console.error("Error submitting complaint:", error);
