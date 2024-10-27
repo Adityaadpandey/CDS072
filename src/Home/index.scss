@@ -7,7 +7,7 @@
   background: linear-gradient(135deg, #3a86ff, #8338ec);
   color: #fff;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+  // border-radius: 20px;
   text-align: center;
 }
 
@@ -40,7 +40,7 @@ a {
 
   .option-card {
     display: flex;
-    min-height: 250px;
+    height: 250px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -51,6 +51,8 @@ a {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+
 
     &:hover {
       transform: translateY(-10px);
