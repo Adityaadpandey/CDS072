@@ -1,0 +1,79 @@
+.security-tasks-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  
+    h1 {
+      color: #333;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .new-task-alert {
+      background-color: #ffebee;
+      border: 1px solid #f44336;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+  
+      h2 {
+        color: #d32f2f;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .task-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+  
+      h3 {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 8px;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #555;
+        margin: 5px 0;
+  
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+  
+      span {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #777;
+      }
+    }
+  
+    .sort-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px auto;
+      background-color: #4caf50;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #388e3c;
+      }
+    }
+  }
+  
