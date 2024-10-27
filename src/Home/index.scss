@@ -2,79 +2,99 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #3a86ff, #8338ec);
+  background: linear-gradient(135deg, #3a86ff, #8338ec);
   color: #fff;
-  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  // border-radius: 20px;
+  text-align: center;
+}
 
-  .heading {
-    font-size: 2.5em;
-    margin-bottom: 1rem;
-    text-align: center;
+.heading {
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  a {
-    text-decoration: none;
+
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.options {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .option-card {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+      background-color: #f8f9fa;
+    }
+
+    .option-title {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #3a86ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .option-text {
+      font-size: 1.2em;
+      text-align: center;
+      color: #555;
+    }
+  }
+}
+
+.footer {
+  // margin-top: 40px;
+  font-size: 1em;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3em;
   }
 
   .options {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .option-card {
-      display: flex;
-      min-height: 170px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 200px;
-      padding: 20px;
-      background-color: #fff;
-      color: #333;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-
-      .option-title {
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
-      }
-
-      .option-text {
-        font-size: 0.9em;
-        text-align: center;
-      }
-    }
+    flex-direction: column;
+    align-items: center;
   }
 
-  @media screen and (max-width: 1200px) {
-    .container {
-      display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #3a86ff, #8338ec);
-  color: #fff;
-  font-family: Arial, sans-serif;
-      aspect-ratio: 3/4;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(./train.jpg);
-    }
-    .heading {
-      font-size: 2em;
-    }
-
-    .option-card {
-      width: 100%;
-      max-width: 300px;
-    }
+  .option-card {
+    width: 90%;
+    max-width: 350px;
   }
 }
