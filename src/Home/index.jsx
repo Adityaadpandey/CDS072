@@ -373,51 +373,43 @@ i18n.init({
       },
     },
   },
-  lng: "en", // default language
+  lng: "en",
   fallbackLng: "en",
-  interpolation: {
-    escapeValue: false, // React already does escaping
-  },
+  interpolation: { escapeValue: false },
+  
 });
-
 const Home = () => {
   const { t } = useTranslation();
   const [language, setLanguage] = useState("en");
+  const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLanguage(lng);
+    setIsOpen(false);
   };
 
   return (
     <div className="container">
       <h1 className="heading">{t("heading")}</h1>
-      <div className="language-switcher">
-        <button onClick={() => changeLanguage("en")}>English</button>
-        <button onClick={() => changeLanguage("or")}>odia</button>
-        <button onClick={() => changeLanguage("mr")}>Marathi</button>
-        <button onClick={() => changeLanguage("ur")}>Urdu</button>
-        <button onClick={() => changeLanguage("pa")}>Panjabi</button>
-        <button onClick={() => changeLanguage("hi")}>Hindi</button>
-        <button onClick={() => changeLanguage("ta")}>Tamil</button>
-        <button onClick={() => changeLanguage("te")}>telugu</button>
-        <button onClick={() => changeLanguage("dg")}>dogri</button>
-        <button onClick={() => changeLanguage("kn")}>kannada</button>
-        <button onClick={() => changeLanguage("as")}>assamese</button>
-        <button onClick={() => changeLanguage("bn")}>bengali</button>
-        <button onClick={() => changeLanguage("brx")}>bodo</button>
-        <button onClick={() => changeLanguage("gu")}>gujarati</button>
-        <button onClick={() => changeLanguage("ks")}>kashmiri</button>
-        <button onClick={() => changeLanguage("kok")}>konkani</button>
-        <button onClick={() => changeLanguage("mai")}>maithili</button>
-        <button onClick={() => changeLanguage("ml")}>malayalam</button>
-        <button onClick={() => changeLanguage("mni")}>meitei</button>
-        <button onClick={() => changeLanguage("ne")}>nepali</button>
-        <button onClick={() => changeLanguage("sa")}>sanskrit</button>
-        <button onClick={() => changeLanguage("sat")}>santhali</button>
-        <button onClick={() => changeLanguage("sd")}>sindhi</button>
 
+      {/* Language Dropdown */}
+      <div className="language-switcher">
+        <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
+          {t("change_language")}: {language.toUpperCase()}
+        </button>
+        {isOpen && (
+          <div className="dropdown-options">
+            {Object.keys(i18n.options.resources).map((lang) => (
+              <button key={lang} onClick={() => changeLanguage(lang)}>
+                {lang.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
+
+      {/* Option Cards */}
       <div className="options">
         <a href="/enduser">
           <div className="option-card">
@@ -453,4 +445,5 @@ const App = () => (
     <Home />
   </I18nextProvider>
 );
+
 export default App;
