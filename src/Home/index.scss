@@ -1,106 +1,107 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  min-height: 100vh;
-  // background: linear-gradient(135deg, #3a86ff, #8338ec);
-  color: #fff;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  // border-radius: 20px;
-  text-align: center;
-  background: url(t2.jpg) no-repeat;
-  background-size: cover
+// Variables for colors and fonts
+$primary-color: #3b82f6; // Tailwind blue-600
+$hover-color: #2563eb; // Tailwind blue-700
+$text-color: #4b5563; // Tailwind gray-600
+$bg-color: #f9fafb; // Tailwind gray-100
+$card-bg-color: #ffffff; // White
+$border-color: #e5e7eb; // Tailwind gray-200
 
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+  text-align: center;
+  background:url(t2.jpg) no-repeat;
+  background-size: cover;
 }
 
 .heading {
-  font-size: 4em;
-  margin-bottom: 20px;
-  // text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-  animation: fadeIn 1s ease-in;
+  font-size: 2rem;
+  font-weight: bold;
+  color: $text-color;
+  margin-bottom: 2rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+.language-switcher {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 2rem;
 
-  to {
-    opacity: 1;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
-.options {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  .option-card {
-    display: flex;
-    height: 250px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 260px;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #333;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-
-
+  .dropdown-btn {
+    padding: 0.5rem 1rem;
+    background-color: $primary-color;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-      background-color: #f8f9fa;
+      background-color: $hover-color;
     }
+  }
+
+  .dropdown-options {
+    position: absolute;
+    margin-top: 0.5rem;
+    width: 10rem;
+    background-color: $card-bg-color;
+    border: 1px solid $border-color;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      text-align: left;
+      color: $text-color;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f1f5f9; // Tailwind gray-200
+        color: $primary-color;
+      }
+    }
+  }
+}
+a{
+  text-decoration: none;
+}
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+
+  .option-card {
+    padding: 1.5rem;
+    background-color: $card-bg-color;
+    border: 1px solid $border-color;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    
 
     .option-title {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: #3a86ff;
+      font-size: 1.25rem;
       font-weight: bold;
-      transition: color 0.3s;
+      color: $text-color;
+      margin-bottom: 0.5rem;
     }
 
     .option-text {
-      font-size: 1.2em;
-      text-align: center;
-      color: #555;
+      color: darken($text-color, 20%);
     }
-  }
-}
-
-.footer {
-  // margin-top: 40px;
-  font-size: 1em;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 768px) {
-  .container{
-    background-image: url('./train.jpg');
-  }
-  .heading {
-    font-size: 3em;
-  }
-
-  .options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .option-card {
-    width: 90%;
-    max-width: 350px;
   }
 }

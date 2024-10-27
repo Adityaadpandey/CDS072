@@ -73,8 +73,8 @@ const Endsolver = () => {
             <div className="thought-content">
               <h2>{thought.content}</h2>
               <h3>PNR: {thought.pnr}</h3>
-              {/* <h3>Title: {thought.title}</h3>
-              <h3>Contact: {thought.contact}</h3> */}
+              <h3>Title: {thought.title}</h3>
+              <h3>Contact: {thought.contact}</h3>
               {thought.resolution === null ? (
                 <h3>
                   Resolution Pending <span className="crs">❌</span>
