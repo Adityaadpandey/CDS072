@@ -374,14 +374,14 @@ i18n.init({
       },
     },
   },
-  lng: "en",
-  fallbackLng: "en",
+  lng: "english",
+  fallbackLng: "english",
   interpolation: { escapeValue: false },
   
 });
 const Home = () => {
   const { t } = useTranslation();
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("english");
   const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng) => {
