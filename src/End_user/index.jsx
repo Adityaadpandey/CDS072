@@ -13,37 +13,39 @@ const Enduser = () => {
   // List of main options
   const mainOptions = [
     { label: "Complaint", value: "complaint" },
-    { label: "Catering", value: "Catering" },
+    { label: "Catering", value: "catering" },
     { label: "Security", value: "security" },
-    { label: "EnquiryCounter", value: "EnquiryCounter" },
-    { label: "DirtyLinen", value: "DirtyLinen" },
+    { label: "EnquiryCounter", value: "enquiryCounter" },
+    { label: "DirtyLinen", value: "dirtyLinen" },
     { label: "SeatingAssignment", value: "seatingAssignment" },
-    { label: "Powersupply", value: "Powersupply" },
+    { label: "Powersupply", value: "powersupply" },
   ];
 
-  // Sub-options based on main selection
-  const subOptions = {
-    Catering: ["hygiene", "quality or taste", "Delay"],
-    Hygiene: ["washroom", "compartment"],
-    security: ["misbehaviour", "missing of things"],
-    EnquiryCounter: ["harsh behaviour"],
-    DirtyLinen: ["no pillow,bedsheet provided", "replace/not clean"],
-    SecurityAssignment: [
-      "Problem with co-passengers",
-      "seat occupied by unknown",
-    ],
-    Powersupply: ["plug point", "ac/fan not working", "short circuit"],
-  };
+const subOptions = {
+  complaint: ["general issue", "specific problem"],
+  catering: ["hygiene", "quality or taste", "Delay"],
+  // Hygiene: ["washroom", "compartment"],
+  security: ["misbehaviour", "missing of things"],
+  EnquiryCounter: ["harsh behaviour"],
+  DirtyLinen: ["no pillow, bedsheet provided", "replace/not clean"],
+  seatingAssignment: ["Problem with co-passengers", "seat occupied by unknown"],
+  Powersupply: ["plug point", "ac/fan not working", "short circuit"],
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Store form data in state to trigger API call in useEffect
-    setFormData({
-      pnr: pnr,
-      content: complaint + " " + station + " " + subStation,
-      title: station,
-      contact: contact,
-    });
+    
+    // Create form data according to API requirements
+    const formattedData = {
+        pnr: pnr,
+        title: station, // Using station as the title
+        content: complaint, // Just the complaint text as required
+        contact: contact,
+    };
+
+    // Store the formatted data to trigger the API call in useEffect
+    setFormData(formattedData);
   };
 
   useEffect(() => {
@@ -65,12 +67,18 @@ const Enduser = () => {
           setResponse(data);
           if (data.pnr === pnr) {
             alert("Complaint submitted successfully!");
+            setComplaint("");
+            setPnr("");
+            setContact("");
+            setSubStation("");
+            setStation("");
             setFormData(null);
             setResponse(null);
             window.location.reload();
           }
         } catch (error) {
           console.error("Error submitting complaint:", error);
+          console.log(formData);
         }
       };
 
@@ -80,8 +88,9 @@ const Enduser = () => {
 
   return (
     <div className="p-container">
-      <h1>Submit Your Train Complaint</h1>
       <form className="form" onSubmit={handleSubmit}>
+      <h2>Submit Your Train Complaint</h2>
+
         <div className="input">
           <label htmlFor="pnr">PNR Number</label>
           <input
@@ -93,7 +102,7 @@ const Enduser = () => {
           />
         </div>
         <div className="input">
-          <label htmlFor="pnr">Contact Number</label>
+          <label htmlFor="contact">Contact Number</label>
           <input
             type="text"
             id="contact"
@@ -146,18 +155,14 @@ const Enduser = () => {
             value={complaint}
             onChange={(e) => setComplaint(e.target.value)}
           ></textarea>
-
-          <label htmlFor="">Provide the picture</label>
-          <input type="file" id="file" name="file" accept="image/*" />
         </div>
         <button type="submit" className="submit-button">
           Submit Complaint
         </button>
         <span className="spn">
-            *We will get the solution in least time possible
-          </span>
+          *We will get the solution in least time possible
+        </span>
       </form>
-      {response && <div className="response">Response: {response.message}</div>}
     </div>
   );
 };

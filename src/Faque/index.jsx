@@ -85,6 +85,7 @@ const Faque = () => {
                 ))}
             </div>
         </div>
+
     );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
+// eslint-disable-next-line no-unused-vars
 import { useTranslation, Trans, I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 
@@ -390,6 +391,7 @@ const Home = () => {
   };
 
   return (
+    <div class="hi">
     <div className="container">
       <h1 className="heading">{t("heading")}</h1>
 
@@ -436,6 +438,7 @@ const Home = () => {
           </div>
         </a>
       </div>
+    </div>
     </div>
   );
 };
