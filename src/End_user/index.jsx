@@ -12,23 +12,23 @@ const Enduser = () => {
 
   // List of main options
   const mainOptions = [
-    { label: "Complaint", value: "complaint" },
-    { label: "Catering", value: "catering" },
-    { label: "Security", value: "security" },
-    { label: "EnquiryCounter", value: "enquiryCounter" },
-    { label: "DirtyLinen", value: "dirtyLinen" },
-    { label: "SeatingAssignment", value: "seatingAssignment" },
-    { label: "Powersupply", value: "powersupply" },
+    { label: "Complaint", value: "Complaint" },
+    { label: "Catering", value: "Catering" },
+    { label: "Security", value: "Security" },
+    { label: "EnquiryCounter", value: "EnquiryCounter" },
+    { label: "DirtyLinen", value: "DirtyLinen" },
+    { label: "SeatingAssignment", value: "SeatingAssignment" },
+    { label: "Powersupply", value: "Powersupply" },
   ];
 
 const subOptions = {
-  complaint: ["general issue", "specific problem"],
-  catering: ["hygiene", "quality or taste", "Delay"],
+  Complaint: ["general issue", "specific problem"],
+  Catering: ["hygiene", "quality or taste", "Delay"],
   // Hygiene: ["washroom", "compartment"],
-  security: ["misbehaviour", "missing of things"],
+  Security: ["misbehaviour", "missing of things"],
   EnquiryCounter: ["harsh behaviour"],
   DirtyLinen: ["no pillow, bedsheet provided", "replace/not clean"],
-  seatingAssignment: ["Problem with co-passengers", "seat occupied by unknown"],
+  SeatingAssignment: ["Problem with co-passengers", "seat occupied by unknown"],
   Powersupply: ["plug point", "ac/fan not working", "short circuit"],
 };
 
