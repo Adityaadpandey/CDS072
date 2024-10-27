@@ -84,6 +84,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .container{
+    background-image: url('./train.jpg');
+  }
   .heading {
     font-size: 3em;
   }
