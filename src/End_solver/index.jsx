@@ -60,6 +60,7 @@ const Endsolver = () => {
           {sortByDate ? "Unsort by Date" : "Sort by Date"}
         </button>
       </div>
+      <div id="hi">
       <div className="thoughts-list">
         {sortedData.map((thought, index) => (
           <div className="thought-card" key={index}>
@@ -72,8 +73,8 @@ const Endsolver = () => {
             <div className="thought-content">
               <h2>{thought.content}</h2>
               <h3>PNR: {thought.pnr}</h3>
-              <h3>Title: {thought.title}</h3>
-              <h3>Contact: {thought.contact}</h3>
+              {/* <h3>Title: {thought.title}</h3>
+              <h3>Contact: {thought.contact}</h3> */}
               {thought.resolution === null ? (
                 <h3>
                   Resolution Pending <span className="crs">❌</span>
@@ -82,12 +83,13 @@ const Endsolver = () => {
                 <h3>Resolution: {thought.resolution}</h3>
               )}
               <p>{thought.solutionbyai?.solution}</p>
-              <span>Priority: {thought.solutionbyai?.priority || "N/A"}</span>
+              <span>Priority: {thought.solutionbyai?.priority+"/10" || "N/A"}</span>
               <br />
               <span>{formatDate(thought.date)}</span>
             </div>
           </div>
         ))}
+      </div>
       </div>
     </>
   );

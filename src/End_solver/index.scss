@@ -4,7 +4,12 @@
   grid-row: auto;
   margin-top: 20px;
 }
-
+#hi {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+}
 .thought-card {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #ccc;
@@ -40,7 +45,8 @@
 
     span {
       font-size: 0.9rem;
-      color: #888;
+      color: white;
+      font-size: 15px;
     }
   }
 }
@@ -59,7 +65,8 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: greenyellow;
+    background-color:#e01515;
+    color: white;
   }
 }
 

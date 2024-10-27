@@ -8,8 +8,8 @@ const Navbar = () => {
 
   const mainLinks = [
     { path: "/", label: "Home" },
-    { path: "/contact-us", label: "Contact Us" },
-    { path: "/about-us", label: "About Us" },
+    { path: "/contact", label: "Contact Us" },
+    { path: "/About", label: "About Us" },
     { path: "/Faq", label:"FAQs"},
   ];
 

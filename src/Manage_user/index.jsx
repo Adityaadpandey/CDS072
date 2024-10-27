@@ -16,10 +16,10 @@ const Manageuser = () => {
       fetch("https://backend-rail-cms-production.up.railway.app/api")
         .then((res) => res.json())
         .then((data) => {
-          // Filter tasks based on the title "security"
-          const filteredTasks = data.filter(
-            (task) => task.title && task.title.toLowerCase() === "security"
-          );  
+          // Filter tasks based on the title "security" and reverse the order
+          const filteredTasks = data
+            .filter((task) => task.title && task.title.toLowerCase() === "security")
+            .reverse(); // Reverse the order here
 
           // If there is a new task, update the state
           if (filteredTasks.length > 0) {
@@ -51,7 +51,7 @@ const Manageuser = () => {
               <p>Contact: {task.contact}</p>
               <p>Resolution Status: {task.resolution ? task.resolution : "Pending"}</p>
               <p>AI Solution: {task.solutionbyai && JSON.parse(task.solutionbyai).solution}</p>
-              <p>Priority: {task.solutionbyai ? JSON.parse(task.solutionbyai).priority : "N/A"}</p>
+              <p>Priority: {task.solutionbyai ? JSON.parse(task.solutionbyai).priority + "/10" : "N/A"}</p>
               <span>Date: {formatDate(task.date)}</span>
             </div>
           ))}
