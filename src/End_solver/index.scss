@@ -46,6 +46,24 @@
 }
 
 
+.sort-button{
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 0.8rem;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: greenyellow;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .thought-card {
     flex-direction: column; 

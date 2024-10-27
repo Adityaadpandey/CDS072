@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 
-const formatDate = (date) => {
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  return new Date(date).toLocaleDateString("en-US", options);
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
 const Endsolver = () => {
   const [data, setData] = useState([]);
   const [sortByPriority, setSortByPriority] = useState(false);
+  const [sortByDate, setSortByDate] = useState(false);
 
   useEffect(() => {
     fetch("https://backend-rail-cms-production.up.railway.app/api")
@@ -23,19 +24,36 @@ const Endsolver = () => {
       });
   }, []);
 
-  const handleSortToggle = () => {
+  const handleSortByPriorityToggle = () => {
     setSortByPriority(!sortByPriority);
+    // setSortByDate(false); // Reset date sorting when toggling priority sorting
   };
 
-  const sortedData = sortByPriority
-    ? [...data].sort((a, b) => (a.solutionbyai?.priority || 0) - (b.solutionbyai?.priority || 0))
-    : data;
+  const handleSortByDateToggle = () => {
+    setSortByDate(!sortByDate);
+    // setSortByPriority(false); // Reset priority sorting when toggling date sorting
+  };
+
+  const sortedData = [...data].sort((a, b) => {
+    if (sortByPriority) {
+      return (a.solutionbyai?.priority || 0) - (b.solutionbyai?.priority || 0);
+    }
+    if (sortByDate) {
+      return new Date(b.date) - new Date(a.date); // Sort by date (latest first)
+    }
+    return 0; // No sorting
+  });
 
   return (
     <>
-      <button onClick={handleSortToggle} className="sort-button">
-        {sortByPriority ? "Unsort by Priority" : "Sort by Priority"}
-      </button>
+      <div className="sorting-buttons">
+        <button onClick={handleSortByPriorityToggle} className="sort-button">
+          {sortByPriority ? "Unsort by Priority" : "Sort by Priority"}
+        </button>
+        <button onClick={handleSortByDateToggle} className="sort-button">
+          {sortByDate ? "Unsort by Date" : "Sort by Date"}
+        </button>
+      </div>
       <div className="thoughts-list">
         {sortedData.map((thought, index) => (
           <div className="thought-card" key={index}>
