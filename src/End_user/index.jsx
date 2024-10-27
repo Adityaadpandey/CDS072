@@ -103,7 +103,7 @@ const Enduser = () => {
           />
         </div>
         <div className="input">
-          <label htmlFor="station">Select Region</label>
+          <label htmlFor="station">Select Category</label>
           <select
             id="station"
             value={station}
@@ -128,7 +128,7 @@ const Enduser = () => {
               onChange={(e) => setSubStation(e.target.value)}
             >
               <option value="" disabled>
-                Select a station
+                Select a Sub Category
               </option>
               {subOptions[station]?.map((st, index) => (
                 <option key={index} value={st}>
@@ -146,10 +146,16 @@ const Enduser = () => {
             value={complaint}
             onChange={(e) => setComplaint(e.target.value)}
           ></textarea>
+
+          <label htmlFor="">Provide the picture</label>
+          <input type="file" id="file" name="file" accept="image/*" />
         </div>
         <button type="submit" className="submit-button">
           Submit Complaint
         </button>
+        <span className="spn">
+            *We will get the solution in least time possible
+          </span>
       </form>
       {response && <div className="response">Response: {response.message}</div>}
     </div>

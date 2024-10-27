@@ -83,7 +83,7 @@ const Endsolver = () => {
                 <h3>Resolution: {thought.resolution}</h3>
               )}
               <p>{thought.solutionbyai?.solution}</p>
-              <span>Priority: {thought.solutionbyai?.priority || "N/A"}</span>
+              <span>Priority: {thought.solutionbyai?.priority+"/10" || "N/A"}</span>
               <br />
               <span>{formatDate(thought.date)}</span>
             </div>
