@@ -12,12 +12,21 @@ const Enduser = () => {
 
   // List of main options
   const mainOptions = [
+<<<<<<< HEAD
     { label: "Complaint", value: "Complaint" },
     { label: "Catering", value: "Catering" },
     { label: "Security", value: "Security" },
     { label: "EnquiryCounter", value: "EnquiryCounter" },
     { label: "DirtyLinen", value: "DirtyLinen" },
     { label: "SeatingAssignment", value: "SeatingAssignment" },
+=======
+    { label: "complaint", value: "complaint" },
+    { label: "catering", value: "catering" },
+    { label: "security", value: "security" },
+    { label: "EnquiryCounter", value: "EnquiryCounter" },
+    { label: "DirtyLinen", value: "DirtyLinen" },
+    { label: "seatingAssignment", value: "seatingAssignment" },
+>>>>>>> 6f7f9fa (good to go)
     { label: "Powersupply", value: "Powersupply" },
   ];
 
