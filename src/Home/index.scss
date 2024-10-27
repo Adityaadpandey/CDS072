@@ -29,39 +29,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-<<<<<<< HEAD
-  
-      .option-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        padding: 20px;
-        background-color:#f9f9f9;
-        color: #333;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s; 
-        &:hover {
-          transform: scale(1.05);
-        }
-        .option-card:hover {
-          transform: translateY(-5px); 
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .option-title {
-          font-size: 1.2em;
-          margin-bottom: 0.5em;
-        }
-  
-        .option-text {
-          font-size: 0.9em;
-          text-align: center;
-          color:#555;
-        }
-=======
       width: 200px;
       padding: 20px;
       background-color: #fff;
@@ -72,7 +39,6 @@
 
       &:hover {
         transform: scale(1.05);
->>>>>>> 355c9d59cf3fba3020cb814fea03996f54dd9b1e
       }
 
       .option-title {
@@ -86,9 +52,6 @@
       }
     }
   }
-<<<<<<< HEAD
-  
-=======
 
   @media (max-width: 768px) {
     .heading {
@@ -101,4 +64,3 @@
     }
   }
 }
->>>>>>> 355c9d59cf3fba3020cb814fea03996f54dd9b1e
