@@ -53,7 +53,21 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
+    .container {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #3a86ff, #8338ec);
+  color: #fff;
+  font-family: Arial, sans-serif;
+      aspect-ratio: 3/4;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(./train.jpg);
+    }
     .heading {
       font-size: 2em;
     }

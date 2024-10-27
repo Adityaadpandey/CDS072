@@ -17,7 +17,7 @@ const Enduser = () => {
     { label: "Security", value: "security" },
     { label: "EnquiryCounter", value: "EnquiryCounter" },
     { label: "DirtyLinen", value: "DirtyLinen" },
-    { label: "SeatingAssignment", value: "seatingAssignment" },
+    { label: "SeatingAssignment", value: "SeatingAssignment" },
     { label: "Powersupply", value: "Powersupply" },
   ];
 
@@ -28,7 +28,7 @@ const Enduser = () => {
     security: ["misbehaviour", "missing of things"],
     EnquiryCounter: ["harsh behaviour"],
     DirtyLinen: ["no pillow,bedsheet provided", "replace/not clean"],
-    SecurityAssignment: [
+    SeatingAssignment: [
       "Problem with co-passengers",
       "seat occupied by unknown",
     ],
@@ -62,7 +62,7 @@ const Enduser = () => {
             }
           );
           const data = await res.json();
-          setResponse(data)
+          setResponse(data);
           if (data.pnr === pnr) {
             alert("Complaint submitted successfully!");
             setFormData(null);
