@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
+// eslint-disable-next-line no-unused-vars
 import { useTranslation, Trans, I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 
