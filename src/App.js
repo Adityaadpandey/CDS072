@@ -10,6 +10,7 @@ import Faque from './Faque'
 import Contact from './Contact'
 import About from './About';
 import User from './User';
+import Admin from './Admin';
 
 const App = () => {
   return (
@@ -23,7 +24,9 @@ const App = () => {
         <Route path='/faq' element={<Faque/>} />
         <Route  path='/contact' element={<Contact/>} />
         <Route path='/about' element={<About/>}/>
-        <Route path='/user' element={<User/>}/>
+        <Route path='/user' element={<User />} />
+        <Route path='/Admin' element={<Admin />} />
+        
 
     </Routes>
     <Footer/>
