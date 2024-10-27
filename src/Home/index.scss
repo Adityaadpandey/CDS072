@@ -4,11 +4,14 @@
   align-items: center;
   padding: 40px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #3a86ff, #8338ec);
+  // background: linear-gradient(135deg, #3a86ff, #8338ec);
   color: #fff;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   // border-radius: 20px;
   text-align: center;
+  background: url(t2.jpg) no-repeat;
+  background-size: cover
+
 }
 
 .heading {
