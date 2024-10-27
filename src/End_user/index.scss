@@ -1,12 +1,15 @@
 .p-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding: 20px;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #3a86ff, #8338ec);
+  // background: linear-gradient(to bottom right, #3a86ff, #8338ec);
   color: #fff;
   font-family: Arial, sans-serif;
+  background-image: url(hi222.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .form {
     background: #fff;

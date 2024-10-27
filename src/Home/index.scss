@@ -7,14 +7,21 @@ $card-bg-color: #ffffff;
 $border-color: #e5e7eb; 
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
-  max-width: 1200px;
-  background-image: url(path.jpg) ;
-  background-size: cover;
+  //  max-width: 1200px; 
+  // background-image: url(path.jpg) ;
+  // background-size: cover;
   text-align: center;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
   
+  
+}
+.hi{
+  background-image: url(path.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .heading {

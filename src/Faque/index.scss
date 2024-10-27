@@ -1,6 +1,5 @@
 body{
-    background: linear-gradient(135deg, #3a86ff, #8338ec);
-}
+ background: linear-gradient(135deg, #3a86ff, #8338ec);}
 .faq-container {
     max-width: 800px;
     margin: 40px auto;
@@ -8,6 +7,7 @@ body{
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .faq-list {

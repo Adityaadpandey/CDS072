@@ -88,8 +88,9 @@ const subOptions = {
 
   return (
     <div className="p-container">
-      <h1>Submit Your Train Complaint</h1>
       <form className="form" onSubmit={handleSubmit}>
+      <h2>Submit Your Train Complaint</h2>
+
         <div className="input">
           <label htmlFor="pnr">PNR Number</label>
           <input

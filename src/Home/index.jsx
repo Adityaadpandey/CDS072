@@ -391,6 +391,7 @@ const Home = () => {
   };
 
   return (
+    <div class="hi">
     <div className="container">
       <h1 className="heading">{t("heading")}</h1>
 
@@ -437,6 +438,7 @@ const Home = () => {
           </div>
         </a>
       </div>
+    </div>
     </div>
   );
 };
