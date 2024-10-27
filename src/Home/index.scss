@@ -1,7 +1,7 @@
 // Variables for colors and fonts
 $primary-color: #3b82f6; 
 $hover-color: #2563eb;
-$text-color: #4b5563; 
+$text-color: black; 
 $bg-color: #f9fafb; 
 $card-bg-color: #ffffff; 
 $border-color: #e5e7eb; 
@@ -20,7 +20,7 @@ $border-color: #e5e7eb;
 .heading {
   font-size: 2rem;
   font-weight: bold;
-  color: $text-color;
+  color: white;
   margin-bottom: 2rem;
 }
 
