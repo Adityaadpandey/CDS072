@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./index.scss";
 
 const formatDate = (dateString) => {
-  const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
   return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
@@ -18,7 +24,9 @@ const Endsolver = () => {
         // Parse `solutionbyai` and set data state
         const parsedData = data.map((item) => ({
           ...item,
-          solutionbyai: item.solutionbyai ? JSON.parse(item.solutionbyai) : null,
+          solutionbyai: item.solutionbyai
+            ? JSON.parse(item.solutionbyai)
+            : null,
         }));
         setData(parsedData.reverse());
       });
@@ -26,12 +34,10 @@ const Endsolver = () => {
 
   const handleSortByPriorityToggle = () => {
     setSortByPriority(!sortByPriority);
-    // setSortByDate(false); // Reset date sorting when toggling priority sorting
   };
 
   const handleSortByDateToggle = () => {
     setSortByDate(!sortByDate);
-    // setSortByPriority(false); // Reset priority sorting when toggling date sorting
   };
 
   const sortedData = [...data].sort((a, b) => {
@@ -39,9 +45,9 @@ const Endsolver = () => {
       return (a.solutionbyai?.priority || 0) - (b.solutionbyai?.priority || 0);
     }
     if (sortByDate) {
-      return new Date(b.date) - new Date(a.date); // Sort by date (latest first)
+      return new Date(b.date) - new Date(a.date);
     }
-    return 0; // No sorting
+    return 0;
   });
 
   return (
@@ -57,9 +63,11 @@ const Endsolver = () => {
       <div className="thoughts-list">
         {sortedData.map((thought, index) => (
           <div className="thought-card" key={index}>
-            {/* Decode and display the base64 image */}
             {thought.img && (
-              <img src={`data:image/png;base64,${thought.img}`} alt={thought.title} />
+              <img
+                src={`data:image/png;base64,${thought.img}`}
+                alt={thought.title}
+              />
             )}
             <div className="thought-content">
               <h2>{thought.content}</h2>
