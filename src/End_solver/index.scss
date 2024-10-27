@@ -6,59 +6,75 @@
 }
 
 .thought-card {
-  background: rgba(255, 255, 255, 0.1); 
-  border: 1px solid #ccc; 
-  padding: 20px; 
-  margin-bottom: 20px; 
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
   width: calc(100%);
-  max-width: 600px; 
-  display: flex; 
+  max-width: 600px;
+  display: flex;
   align-items: center;
-  border-radius: 8px; 
+  border-radius: 8px;
 
   img {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     margin-right: 20px;
   }
 
   .thought-content {
     h3 {
-      font-size: 1.2rem; 
-      margin: 0; 
+      font-size: 1.2rem;
+      margin: 0;
     }
-    .crs{
-        color: rgb(255, 0, 0); 
-       font-size: larger;
+    .crs {
+      color: rgb(255, 0, 0);
+      font-size: larger;
     }
 
     p {
-      margin: 0.5rem 0; 
-      color: #000000; 
+      margin: 0.5rem 0;
+      color: #000000;
     }
 
     span {
       font-size: 0.9rem;
-      color: #888; 
+      color: #888;
     }
   }
 }
 
+.sort-button {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 0.8rem;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: greenyellow;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .thought-card {
-    flex-direction: column; 
-    align-items: flex-start; 
-    padding: 10px; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
     width: 90%;
   }
   .thought-card img {
-    margin-right: 0; 
-    margin-bottom: 10px; 
+    margin-right: 0;
+    margin-bottom: 10px;
   }
   .thought-content h3 {
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
   }
-    
 }

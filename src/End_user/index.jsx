@@ -62,7 +62,7 @@ const Enduser = () => {
             }
           );
           const data = await res.json();
-          setResponse(data)
+          setResponse(data);
           if (data.pnr === pnr) {
             alert("Complaint submitted successfully!");
             setFormData(null);
