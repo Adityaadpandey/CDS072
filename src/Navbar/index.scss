@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #1f2937; // bg-gray-900
-    color: #f3f4f6; // text-gray-100
+    background-color: #1f2937; 
+    color: #f3f4f6; 
     position: sticky;
     top: 0;
     z-index: 50;
@@ -16,16 +16,16 @@
     }
   
     .logo {
-      font-size: 1.875rem; // text-3xl
+      font-size: 1.875rem; 
       font-weight: bold;
-      color: #6366f1; // text-indigo-400
+      color: #6366f1; 
   
       .logo-link {
         color: inherit;
         text-decoration: none;
   
         &:hover {
-          color: #fbbf24; // text-yellow-400
+          color: #fbbf24; 
         }
       }
     }
@@ -73,19 +73,19 @@
         color: inherit;
         margin: 0.5rem 0;
         text-decoration: none;
-        font-size: 1.125rem; // text-lg
+        font-size: 1.125rem; 
   
         @media (min-width: 768px) {
           margin: 0;
-          margin-left: 1.5rem; // space-x-6 equivalent
+          margin-left: 1.5rem; 
         }
   
         &:hover {
-          color: #6366f1; // hover:text-indigo-400
+          color: #6366f1; 
         }
   
         &.active {
-          color: #6366f1; // text-indigo-400
+          color: #6366f1; 
         }
       }
   
@@ -109,7 +109,7 @@
           right: 0;
           margin-top: 0.5rem;
           width: 12rem;
-          background-color: #1f2937; // bg-gray-800
+          background-color: #1f2937; 
           border-radius: 0.25rem;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           z-index: 20;
@@ -122,7 +122,7 @@
             text-decoration: none;
   
             &:hover {
-              background-color: #374151; // bg-gray-700
+              background-color: #374151; 
             }
           }
         }

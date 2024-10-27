@@ -10,6 +10,7 @@ const Navbar = () => {
     { path: "/", label: "Home" },
     { path: "/contact-us", label: "Contact Us" },
     { path: "/about-us", label: "About Us" },
+    { path: "/Faq", label:"FAQs"},
   ];
 
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Links */}
+        
         <div className={`links-container ${isOpen ? "open" : ""}`}>
           {mainLinks.map((link, index) => (
             <Link

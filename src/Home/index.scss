@@ -31,16 +31,19 @@
         justify-content: center;
         width: 200px;
         padding: 20px;
-        background-color: #fff;
+        background-color:#f9f9f9;
         color: #333;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s;
-  
+        transition: transform 0.3s, box-shadow 0.3s; 
         &:hover {
           transform: scale(1.05);
         }
-  
+        .option-card:hover {
+          transform: translateY(-5px); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
         .option-title {
           font-size: 1.2em;
           margin-bottom: 0.5em;
@@ -49,6 +52,7 @@
         .option-text {
           font-size: 0.9em;
           text-align: center;
+          color:#555;
         }
       }
     }
@@ -64,3 +68,4 @@
       }
     }
   }
+  

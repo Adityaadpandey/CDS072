@@ -6,6 +6,7 @@ import Enduser from './End_user';
 import Manageuser from './Manage_user';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Faque from './Faque'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/endsolver' element={<Endsolver/>} />
         <Route path='/enduser' element={<Enduser/>} />
         <Route path='/manager' element={<Manageuser/>} />
+        <Route path='/faq' element={<Faque/>} />
     </Routes>
     <Footer/>
     </>
