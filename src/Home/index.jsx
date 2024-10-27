@@ -6,7 +6,7 @@ import i18n from "i18next";
 // Initialize i18next
 i18n.init({
   resources: {
-    en: {
+    english: {
       translation: {
         heading: "Complaint Management System",
         file_complaint: "File a Complaint",
@@ -25,7 +25,7 @@ i18n.init({
       },
     },
 
-    hi: {
+    hindi: {
       translation: {
         heading: "शिकायत प्रबंधन प्रणाली",
         file_complaint: "शिकायत दर्ज करें",
@@ -43,7 +43,7 @@ i18n.init({
         change_language: "भाषा बदलें",
       },
     },
-    ur: {
+    urdu: {
       translation: {
         heading: "شکایت کا نظام",
         file_complaint: "شکایت درج کریں",
@@ -61,7 +61,7 @@ i18n.init({
         change_language: "زبان تبدیل کریں",
       },
     },
-    pa: {
+    panjabi: {
       translation: {
         heading: "ਸ਼ਿਕਾਇਤ ਪ੍ਰਬੰਧਨ ਸਿਸਟਮ",
         file_complaint: "ਸ਼ਿਕਾਇਤ ਦਰਜ ਕਰੋ",
@@ -79,7 +79,7 @@ i18n.init({
         change_language: "ਭਾਸ਼ਾ ਬਦਲੋ",
       },
     },
-    mr: {
+    marathi: {
       translation: {
         heading: "तक्रार व्यवस्थापन प्रणाली",
         file_complaint: "तक्रार दाखल करा",
@@ -97,7 +97,7 @@ i18n.init({
         change_language: "भाषा बदला",
       },
     },
-    or: {
+    odia: {
       translation: {
         heading: "ଅଭିଯୋଗ ପରିଚାଳନା ପ୍ରଣାଳୀ",
         file_complaint: "ଅଭିଯୋଗ ଦାଖଲ କରନ୍ତୁ",
@@ -115,7 +115,7 @@ i18n.init({
         change_language: "ଭାଷା ପରିବର୍ତ୍ତନ",
       },
     },
-    ta: {
+    tamil: {
       translation: {
         heading: "புகார் மேலாண்மை அமைப்பு",
         file_complaint: "புகாரை அளிக்கவும்",
@@ -134,7 +134,7 @@ i18n.init({
       },
     },
 
-    dg: {
+    dogri: {
       translation: {
         heading: "शिकायत प्रबंधन प्रणाली",
         file_complaint: "शिकायत दर्ज करें",
@@ -153,7 +153,7 @@ i18n.init({
       },
     },
 
-    kn: {
+    kannada: {
       translation: {
         heading: "ತಮ್ಮುಳಿಕೆ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ",
         file_complaint: "ತಮ್ಮುಳಿಕೆ ಸಲ್ಲಿಸಿ",
@@ -169,7 +169,7 @@ i18n.init({
         change_language: "ಭಾಷೆ ಬದಲಿಸಿ",
       },
     },
-    as: {
+    assamese: {
       translation: {
         heading: "অভিযোগ পৰিচালনা ব্যৱস্থা",
         file_complaint: "অভিযোগ দাখিল কৰক",
@@ -184,7 +184,7 @@ i18n.init({
         change_language: "ভাষা সলনি কৰক",
       },
     },
-    bn: {
+    bengali: {
       translation: {
         heading: "অভিযোগ ব্যবস্থাপনা পদ্ধতি",
         file_complaint: "অভিযোগ দাখিল করুন",
@@ -199,7 +199,7 @@ i18n.init({
         change_language: "ভাষা পরিবর্তন করুন",
       },
     },
-    brx: {
+    bodo: {
       translation: {
         heading: "फिरायनि माङायनि",
         file_complaint: "फिराय दाखल करय",
@@ -213,7 +213,7 @@ i18n.init({
         change_language: "भाषा बदलय",
       },
     },
-    gu: {
+    gujarati: {
       translation: {
         heading: "ફરિયાદ વ્યવસ્થાપન",
         file_complaint: "ફરિયાદ નોંધાવો",
@@ -227,7 +227,7 @@ i18n.init({
         change_language: "ભાષા બદલો",
       },
     },
-    ks: {
+    kashmiri: {
       translation: {
         heading: "شکایت کا نظام",
         file_complaint: "شکایت درج کریں",
@@ -241,7 +241,7 @@ i18n.init({
         change_language: "زبان تبدیل کریں",
       },
     },
-    kok: {
+    konkani: {
       translation: {
         heading: "तक्रार व्यवस्थापन",
         file_complaint: "तक्रार दाखल करा",
@@ -255,7 +255,7 @@ i18n.init({
         change_language: "भाषा बदला",
       },
     },
-    mai: {
+    maithili: {
       translation: {
         heading: "शिकायत प्रबंधन प्रणाली",
         file_complaint: "शिकायत दर्ज करु",
@@ -269,7 +269,7 @@ i18n.init({
         change_language: "भाषा बदलु",
       },
     },
-    ml: {
+    malayalam: {
       translation: {
         heading: "പരാതി മാനേജ്മെന്റ്",
         file_complaint: "പരാതി നല്‍കുക",
@@ -283,7 +283,7 @@ i18n.init({
         change_language: "ഭാഷ മാറ്റുക",
       },
     },
-    mni: {
+    meitei: {
       translation: {
         heading: "প্ৰতিবেদন পদ্ধতি",
         file_complaint: "অভিযোগ দাখিল করুন",
@@ -297,7 +297,7 @@ i18n.init({
         change_language: "ভাষা বদল",
       },
     },
-    ne: {
+    nepali: {
       translation: {
         heading: "गुनासो व्यवस्थापन प्रणाली",
         file_complaint: "गुनासो दर्ता गर्नुहोस्",
@@ -311,7 +311,7 @@ i18n.init({
         change_language: "भाषा परिवर्तन गर्नुहोस्",
       },
     },
-    sa: {
+    sanskrit: {
       translation: {
         heading: "अभियोग प्रबंधन प्रणाली",
         file_complaint: "अभियोग प्रविष्ट करें",
@@ -325,7 +325,7 @@ i18n.init({
         change_language: "भाषा बदलें",
       },
     },
-    sat: {
+    santhali: {
       translation: {
         heading: "ᱞᱟᱭᱦᱤᱜ ᱟᱫᱟᱢ ᱛᱤᱜᱚᱛ",
         file_complaint: "ᱞᱟᱭᱦᱤᱜ ᱞᱤᱛᱨᱚᱡ",
@@ -339,7 +339,7 @@ i18n.init({
         change_language: "ᱟᱝᱦᱟ ᱠᱤᱲ ᱞᱞᱞ",
       },
     },
-    sd: {
+    sindhi: {
       translation: {
         heading: "شکایت مینجمنٹ سسٹم",
         file_complaint: "شکایت درج کریں",
@@ -354,7 +354,7 @@ i18n.init({
       },
     },
 
-    te: {
+    telugu: {
       translation: {
         heading: "ఫిర్యాదు నిర్వహణ వ్యవస్థ",
         file_complaint: "ఫిర్యాదు చేయండి",
