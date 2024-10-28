@@ -22,16 +22,28 @@ const Endsolver = () => {
       .then((res) => res.json())
       .then((data) => {
         // Parse `solutionbyai` and set data state
-        const parsedData = data.map((item) => ({
-          ...item,
-          solutionbyai: item.solutionbyai
-            ? JSON.parse(item.solutionbyai)
-            : null,
-        }));
+        const parsedData = data.map((item) => {
+          let parsedSolution;
+          try {
+            // Trim any whitespace/newlines from the solutionbyai string before parsing
+            parsedSolution = item.solutionbyai 
+              ? JSON.parse(item.solutionbyai.trim()) 
+              : null;
+          } catch (error) {
+            console.error("Error parsing solutionbyai:", item.solutionbyai, error);
+            parsedSolution = null; // Handle as needed
+          }
+  
+          return {
+            ...item,
+            solutionbyai: parsedSolution,
+          };
+        });
         setData(parsedData.reverse());
-      });
+      })
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
+  
   const handleSortByPriorityToggle = () => {
     setSortByPriority(!sortByPriority);
   };
