@@ -77,7 +77,7 @@ const Endsolver = () => {
               <h3>Contact: {thought.contact}</h3>
               {thought.resolution === false ? (
                 <h3>
-                  Resolution Pending <span className="crs">❌</span>
+                  {/* Resolution Pending <span className="crs">❌</span> */}
                 </h3>
               ) : (
                 <h3>Resolution: {thought.resolution}</h3>
