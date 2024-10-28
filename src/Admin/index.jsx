@@ -3,7 +3,8 @@ import "./index.scss";
 
 const Admin = () => {
   return (
-    <div className="container">
+      <div className="container">
+          <h1>Admin Panel</h1>
       <div className="options">
         <a href="/manager">
           <div className="option-card">
