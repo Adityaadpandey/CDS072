@@ -10,26 +10,26 @@ const Enduser = () => {
   const [formData, setFormData] = useState(null); 
   const [response, setResponse] = useState(null); 
 
-  const mainOptions = [
-    { label: "Complaint", value: "Complaint" },
-    { label: "Catering", value: "Catering" },
-    { label: "Security", value: "Security" },
-    { label: "EnquiryCounter", value: "EnquiryCounter" }, 
-    {label:"DirtyLinen", value: "DirtyLinen" },
-    { label: "SeatingAssignment", value: "SeatingAssignment" },
-    { label: "Powersupply", value: "Powersupply" },
-  ];
-
-const subOptions = {
-  Complaint: ["general issue", "specific problem"],
-  Catering: ["hygiene", "quality or taste", "Delay"],
-  Security: ["misbehaviour", "missing of things"],
-  EnquiryCounter: ["harsh behaviour"],
-  DirtyLinen: ["no pillow, bedsheet provided", "replace/not clean"],
-  SeatingAssignment: ["Problem with co-passengers", "seat occupied by unknown"],
-  Powersupply: ["plug point", "ac/fan not working", "short circuit"],
-};
-
+ // List of main options
+ const mainOptions = [
+      { label: "Complaint", value: "Complaint" },
+      { label: "Catering", value: "Catering" },
+      { label: "Security", value: "Security" },
+      { label: "EnquiryCounter", value: "EnquiryCounter" },
+      { label: "DirtyLinen", value: "DirtyLinen" },
+      { label: "SeatingAssignment", value: "SeatingAssignment" },
+      { label: "Powersupply", value: "Powersupply" },
+    ];
+  
+  const subOptions = {
+    Complaint: ["general issue", "specific problem"],
+    Catering: ["hygiene", "quality or taste", "Delay"],
+    Security: ["misbehaviour", "missing of things"],
+    EnquiryCounter: ["harsh behaviour"],
+    DirtyLinen: ["no pillow, bedsheet provided", "replace/not clean"],
+    SeatingAssignment: ["Problem with co-passengers", "seat occupied by unknown"],
+    Powersupply: ["plug point", "ac/fan not working", "short circuit"],
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
